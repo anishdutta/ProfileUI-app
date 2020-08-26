@@ -1,4 +1,4 @@
-# flutter_traveler_profile_app
+# profile_app
 
 Flutter travel profiler app ui
 
