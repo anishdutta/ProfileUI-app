@@ -69,15 +69,19 @@ class _EditProfilePageState extends State<EditProfilePage> {
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Expanded(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Column(
+
                     children: <Widget>[
+                      SizedBox(
+                        height: 15,
+                      ),
                       Container(
+
                         height: 15 * SizeConfig.heightMultiplier,
                         width: 30 * SizeConfig.widthMultiplier,
                         decoration: BoxDecoration(
@@ -88,7 +92,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         ),
                       ),
                       SizedBox(
-                        height: 15,
+                        height: 10,
                       ),
                       Text('Change Profile Photo',
                       style: TextStyle(
@@ -101,6 +105,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
                     padding: EdgeInsets.symmetric(horizontal: 40),
                     child: Column(
                       children: <Widget>[
+                        SizedBox(
+                          height: 25,
+                        ),
                     FadeAnimation(
                       1.3,
                       TextField(
@@ -120,6 +127,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         ),
                       ),
                     ),
+                        SizedBox(
+                          height: 10,
+                        ),
                         FadeAnimation(
                           1.8,
                           TextField(
@@ -139,11 +149,13 @@ class _EditProfilePageState extends State<EditProfilePage> {
                             ),
                           ),
                         ),
+                        SizedBox(
+                          height: 10,
+                        ),
                         FadeAnimation(
                           2,
                           TextField(
 
-                            controller: txt,
                             decoration: InputDecoration(
                               labelText: 'Bio',
                               labelStyle: TextStyle(
@@ -157,6 +169,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
 
                             ),
                           ),
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                         FadeAnimation(
                           2.5,
@@ -177,6 +192,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
                             ),
                           ),
                         ),
+                        SizedBox(
+                          height: 10,
+                        ),
                         FadeAnimation(
                           3,
                           TextField(
@@ -196,6 +214,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
                             ),
                           ),
                         ),
+                        SizedBox(
+                          height: 10,
+                        ),
 
                       ],
                     ),
@@ -210,22 +231,4 @@ class _EditProfilePageState extends State<EditProfilePage> {
     );
   }
 
-  Widget buildTextField(String hintText) {
-    return TextField(
-
-      controller: txt,
-      decoration: InputDecoration(
-      labelText: 'Username',
-        labelStyle: TextStyle(
-          fontSize: 20,
-          color: Colors.teal,
-        fontWeight: FontWeight.bold),
-        focusColor: Colors.teal[500],
-
-
-
-
-      ),
-    );
-  }
 }

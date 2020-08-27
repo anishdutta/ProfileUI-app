@@ -46,10 +46,10 @@ class _ProfileFirstState extends State<ProfileFirst> {
         children: <Widget>[
 
           Container(
-            color: Colors.blue[600],
-            height: 40 * SizeConfig.heightMultiplier,
+            color: Colors.purple[800],
+            height: 50 * SizeConfig.heightMultiplier,
             child: Padding(
-              padding:  EdgeInsets.only(left: 30.0, right: 30.0, top: 10 * SizeConfig.heightMultiplier),
+              padding:  EdgeInsets.only(left: 30.0, right: 30.0, top: 6 * SizeConfig.heightMultiplier),
               child: Column(
                 children: <Widget>[
                   Row(
@@ -154,42 +154,49 @@ class _ProfileFirstState extends State<ProfileFirst> {
                           ),),
                         ],
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.white60),
-                          borderRadius: BorderRadius.circular(5.0),
-                        ),
-                        child: MaterialButton(
-                          onPressed: (){
-                            Navigator.push(
-                                context,
-                                PageTransition(
-                                    type: PageTransitionType.fade,
-                                    child: EditProfilePage()));
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text("EDIT PROFILE", style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 1.8 * SizeConfig.textMultiplier
-                            ),),
-                          ),
-                        ),
-                      ),
+
                     ],
                   ),
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    width: double.infinity,
+
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.white60),
+                      borderRadius: BorderRadius.circular(5.0),
+                    ),
+                    child: MaterialButton(
+                      onPressed: (){
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                type: PageTransitionType.fade,
+                                child: EditProfilePage()));
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("EDIT PROFILE", style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 1.8 * SizeConfig.textMultiplier
+                        ),),
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
           ),
 
           Padding(
+
             padding:  EdgeInsets.only(top: 35 * SizeConfig.heightMultiplier),
             child: Container(
+
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
+                  color: Colors.purple[50],
+
+                  borderRadius: BorderRadius.only(
                   topRight: Radius.circular(30.0),
                   topLeft: Radius.circular(30.0),
                 )
